@@ -10,7 +10,6 @@ import csv
 total = 0.0
 
 for row in csv.reader(fileinput.input(), delimiter='|'):
-    if not fileinput.isfirstline():
         total += float(row[14])
         ###
         # TODO: calculate other statistics here
