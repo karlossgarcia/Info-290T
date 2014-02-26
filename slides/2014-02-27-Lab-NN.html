@@ -160,69 +160,50 @@ class: left, top, inverse
 
 ---
 
-## HW: Gini
+## Continue Back Propagation
 
-  + Calculate Gini Index
+.white-background[
+<img src="img/ann8.png"/>
+]
 
----
+???
 
-## Gini Index
+## Expected
 
-```python
-  Gini(D) = 1 - sum(frac**2 for frac in classes)
-```
-  Sum of the squares of the fraction of items in each class
-
----
-
-## Data: Campaign Contributions
-
-  + Federal [campaign finance data](ftp://ftp.fec.gov/FEC/2012/pas212.zip) (same as before)
-  + Calculating the Gini Index for the Candidate Names for the entire data set
-  + Partition by zip code, calculate the weighted average Gini Index score
-    over all partitions
-  + Partitions are weighted by the number of records they contain divided by
-    the total number of records in the data set
+  + Labeling: Top to bottom, left to right:
+  + 1 is upper left, 2 is lower left, 3 is top hidden layer, 6 is output layer
 
 ---
 
-## Extra Credit
+## Submit
 
-  + Find a best split of a continuous field
-
----
-
-## Python Tips
-
-  + [collections](http://docs.python.org/2/library/collections.html) module
-    + ```defaultdict``` auto creates keys
-    + ```Counter``` counts hashable objects
-
-```python
->>> x = defaultdict(int)
->>> x['a'] += 3
->>> x['a']
-3
->>> x['b']
-0
->>> x
-defaultdict(<type 'int'>, {'a': 3, 'b': 0})
-
->>> y = Counter()
->>> y.update(['a', 'b', 'a', 'c'])
->>> y
-Counter({'a': 2, 'c': 1, 'b': 1})
+  ```nn-train.txt```
+```text
+err_6 =
+err_5 =
+...
+w_36 =
+w_46 =
+...
+w_13 =
+...
 ```
 
+???
+
+## Fill In
+
+  + Fill in values
+  + You may use a calculator or Python
+  + If you want feedback or partial credit, include any code in another file
+
 ---
 
-## Git Tips
+## Project
 
-```bash
-$ git checkout master
-$ git pull jimmy master
-$ git checkout -b hw-gini
-```
+  + Find a partner (if applicable)
+  + Find a [data set](http://blog.bigml.com/2013/02/28/data-data-data-thousands-of-public-data-sources/)
+  + Start brainstorming
 
     </textarea>
     <script src="production/remark-0.5.9.min.js" type="text/javascript">
